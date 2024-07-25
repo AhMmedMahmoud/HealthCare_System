@@ -5,6 +5,8 @@
 # Class Diagram
 ![image](https://github.com/user-attachments/assets/26dbae19-6ff1-4279-a4e7-4130d203188a)
 
+# Login Sequence Diagram
+![image](https://github.com/user-attachments/assets/0699e851-677f-4079-95b8-4960045aed03)
 
 # build instructions
 ```cmake
