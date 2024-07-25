@@ -9,7 +9,7 @@
 ![image](https://github.com/user-attachments/assets/9050da9e-b4f4-4f2f-8c3c-5350577b01c7)
 
 # Confirm Appointment Sequence Diagram
-![image](https://github.com/user-attachments/assets/bce6fd4b-0e0b-433d-a8b8-725424f3a445)
+![image](https://github.com/user-attachments/assets/24067a97-9548-4fce-ae68-69ff3b215f05)
 
 # build instructions
 ```cmake
