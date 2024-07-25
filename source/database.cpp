@@ -196,7 +196,7 @@ bool Database::isVerifiedAdmin(int _id, std::string _password)
     return _result;
 }
 
-void Database::viewAvailableDoctors()
+void Database::viewAvailableAppointments()
 {
     std::cout << "---------------------------------\n";
     for(int i = 0; i < doctors.size(); i++) {

@@ -63,7 +63,7 @@ void Patient::displayInfo() const
 void Patient::bookAppointment()
 {
     if(getLoginState() == loginState::LOGIN_VERIFIED) {
-        db.viewAvailableDoctors();
+        db.viewAvailableAppointments();
         
         int doctorId;
         int slotNumber;

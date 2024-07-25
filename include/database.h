@@ -51,7 +51,7 @@ public:
     Admin verifyAdmin(int _id, std::string _password);   
     bool isVerifiedAdmin(int _id, std::string _password);
 
-    void viewAvailableDoctors();
+    void viewAvailableAppointments();
     void viewAppointments();
     void viewPatients();
     void viewDoctors();
