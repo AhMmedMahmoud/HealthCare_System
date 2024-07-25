@@ -5,10 +5,10 @@
 # Class Diagram
 ![Picture1](https://github.com/user-attachments/assets/dd42a138-f269-492d-b469-1eac6fb54f3c)
 
-# Patient Login Sequence Diagram
+# Book Appointment Sequence Diagram
 ![image](https://github.com/user-attachments/assets/343f5b8c-5044-40ab-bd6a-e1beb920c332)
 
-# Doctor Login Sequence Diagram
+# Confirm Appointment Sequence Diagram
 ![image](https://github.com/user-attachments/assets/7be0decf-2939-4913-ac4c-2c6e7e3da5c1)
 
 # build instructions
