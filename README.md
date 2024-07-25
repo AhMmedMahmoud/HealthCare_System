@@ -3,7 +3,7 @@
 ![f5c97450-a3e5-42d4-b856-0ff50f53b0dc](https://github.com/user-attachments/assets/57324d20-2825-4e47-84ee-67f9c56626d4)
 
 # Class Diagram
-![image](https://github.com/user-attachments/assets/26dbae19-6ff1-4279-a4e7-4130d203188a)
+![Picture1](https://github.com/user-attachments/assets/dd42a138-f269-492d-b469-1eac6fb54f3c)
 
 # Patient Login Sequence Diagram
 ![image](https://github.com/user-attachments/assets/343f5b8c-5044-40ab-bd6a-e1beb920c332)
