@@ -6,10 +6,10 @@
 ![Picture1](https://github.com/user-attachments/assets/dd42a138-f269-492d-b469-1eac6fb54f3c)
 
 # Book Appointment Sequence Diagram
-![image](https://github.com/user-attachments/assets/da6d4f90-aa25-49e3-baf0-8808691a3952)
+![image](https://github.com/user-attachments/assets/914185ca-5c24-4b73-9fc0-f25628b0a8e3)
 
 # Confirm Appointment Sequence Diagram
-![image](https://github.com/user-attachments/assets/8a5416d0-16cc-4687-87b6-1972635b73b0)
+![image](https://github.com/user-attachments/assets/bce6fd4b-0e0b-433d-a8b8-725424f3a445)
 
 # build instructions
 ```cmake
