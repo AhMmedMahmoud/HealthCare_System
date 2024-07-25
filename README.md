@@ -6,7 +6,7 @@
 ![image](https://github.com/user-attachments/assets/26dbae19-6ff1-4279-a4e7-4130d203188a)
 
 # Login Sequence Diagram
-![image](https://github.com/user-attachments/assets/0699e851-677f-4079-95b8-4960045aed03)
+![image](https://github.com/user-attachments/assets/343f5b8c-5044-40ab-bd6a-e1beb920c332)
 
 # build instructions
 ```cmake
