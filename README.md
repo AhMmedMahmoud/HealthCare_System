@@ -1,6 +1,6 @@
 # HealthCare
 # Use Case Diagram
-![0edfc876-13c9-4305-9b95-2acb2e12eb7e](https://github.com/user-attachments/assets/e350f162-a0ff-4fd1-b3c7-eb41874de0ee)
+![0edfc876-13c9-4305-9b95-2acb2e12eb7e](https://github.com/user-attachments/assets/7d372a16-c77d-464d-96bf-ac5c62a3b179)
 
 # Class Diagram
 ![image](https://github.com/user-attachments/assets/26dbae19-6ff1-4279-a4e7-4130d203188a)
