@@ -94,47 +94,50 @@ void User::displayInfo() const {
 }
 
 
-void User::manageAccount()
-{
-    if(state == loginState::LOGIN_VERIFIED) {
+void User::manageAccount() {
+    if (state == loginState::LOGIN_VERIFIED) {
         int _choice;
         std::string _newValue;
 
-        std::cout << "Press 0 for modify name\n";
-        std::cout << "      1 for modify address\n";
-        std::cout << "      2 for modify phone number\n";
-        std::cout << "      3 for ignore\n";
+        std::cout << "Press 0 for modify name\n"
+                  << "      1 for modify address\n"
+                  << "      2 for modify phone number\n"
+                  << "      3 for ignore\n";
 
-        std::cin >> _choice;
-
-        switch(_choice) {
-            case 0:
-                std::cin.ignore(); // Ignore the newline character left in the buffer  
-                std::cout << "Enter new value: ";
-                std::getline(std::cin, _newValue);  // This will read the entire line, including spaces  
-
-                db.modifyPatientName(getId(), _newValue);
-            break;
-
-            case 1:
-                std::cin.ignore(); // Ignore the newline character left in the buffer  
-                std::cout << "Enter new value: ";
-                std::getline(std::cin, _newValue);  // This will read the entire line, including spaces  
-
-                db.modifyPatientAddress(getId(), _newValue);
-            break;
-
-            case 2:
-                std::cin.ignore(); // Ignore the newline character left in the buffer  
-                std::cout << "Enter new value: ";
-                std::getline(std::cin, _newValue);  // This will read the entire line, including spaces  
-
-                db.modifyPatientPhoneNumber(getId(), _newValue);
-            break;
+        if (!(std::cin >> _choice)) {
+            std::cout << "Invalid input! Please enter a number.\n";
+            std::cin.clear(); // Clear error flag
+            std::cin.ignore(); // Ignore remaining input
+            return;
         }
-    }
-    else {
+
+        switch (_choice) {
+            case 0:
+            case 1:
+            case 2:
+                std::cin.ignore(); // Ignore the newline character left in the buffer
+                std::cout << "Enter new value: ";
+                std::getline(std::cin, _newValue); // This will read the entire line, including spaces
+                break;
+            case 3:
+                return;
+            default:
+                std::cout << "Invalid choice! Please enter a valid option.\n";
+                return;
+        }
+
+        switch (_choice) {
+            case 0:
+                db.modifyPatientName(getId(), _newValue);
+                break;
+            case 1:
+                db.modifyPatientAddress(getId(), _newValue);
+                break;
+            case 2:
+                db.modifyPatientPhoneNumber(getId(), _newValue);
+                break;
+        }
+    } else {
         std::cout << "You need to log in to access this feature\n";
     }
 }
-
