@@ -117,7 +117,7 @@ void Doctor::updateMedicalReport() {
         std::cout << "Enter Medical Report: ";
         std::getline(std::cin, medicalReport);  // This will read the entire line, including spaces  
 
-        db.modifyMedicalReport(patientId, medicalReport);
+        db.modifyPatientMedicalReport(patientId, medicalReport);
     }
     else {
         std::cout << "You need to log in to access this feature\n";

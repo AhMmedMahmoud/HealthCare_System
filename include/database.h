@@ -54,6 +54,7 @@ public:
     void viewAvailableDoctors();
     void viewAppointments();
     void viewPatients();
+    void viewDoctors();
     void viewMedicalHistory(int patientId);
     void addAppointment(int patientId, int doctorId, int slotNumber);
     void addPatient( Admin& admin,
@@ -64,6 +65,8 @@ public:
                      std::string password
                   );
     int findAppointment(int id);
+    int findPatient(int id);
+    int findDoctor(int id);
     void addDoctor( Admin& admin,
                     std::string name,
                     std::string address,
@@ -72,11 +75,15 @@ public:
                     std::vector<TimeSlot> availableSlots,
                     std::string password
                   );
-    void modifyName(int patientId, std::string newValue);
-    void modifyAddress(int patientId, std::string newValue);
-    void modifyPhoneNumber(int patientId, std::string newValue);
-    void modifyMedicalReport(int patientId, std::string newValue);
+    void modifyPatientName(int patientId, std::string newValue);
+    void modifyPatientAddress(int patientId, std::string newValue);
+    void modifyPatientPhoneNumber(int patientId, std::string newValue);
+    void modifyPatientMedicalReport(int patientId, std::string newValue);
+    void modifyDoctorName(int doctorId, std::string newValue);
+    void modifyDoctorAddress(int doctorId, std::string newValue);
+    void modifyDoctorPhoneNumber(int doctorId, std::string newValue);
     void modifyAppointmentStatus(int index, appointmentStatus state);
+    
 };
 
 #endif

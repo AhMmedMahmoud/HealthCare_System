@@ -158,5 +158,119 @@ void Admin::addDoctor() {
         std::cout << "You need to log in to access this feature\n";
     }
 }
+
 /*********** getters and setters **********/
 accessLevel Admin::getAcessLevel(){ return access;}
+
+
+void Admin::managePatientAccount()
+{
+    if(getLoginState() == loginState::LOGIN_VERIFIED) {
+        db.viewPatients();
+
+        int _id;
+        std::cout << "Enter Patient ID of patient you want ti modify: ";
+        std::cin >> _id;
+        
+        int _index = db.findPatient(_id);
+        if(_index != -1) {
+            int _choice;
+            std::string _newValue;
+
+            std::cout << "Press 0 for modify name\n";
+            std::cout << "      1 for modify address\n";
+            std::cout << "      2 for modify phone number\n";
+            std::cout << "      3 for ignore\n";
+
+            std::cin >> _choice;
+
+            switch(_choice) {
+                case 0:
+                    std::cin.ignore(); // Ignore the newline character left in the buffer  
+                    std::cout << "Enter new value: ";
+                    std::getline(std::cin, _newValue);  // This will read the entire line, including spaces  
+
+                    db.modifyPatientName(_index, _newValue);
+                break;
+
+                case 1:
+                    std::cin.ignore(); // Ignore the newline character left in the buffer  
+                    std::cout << "Enter new value: ";
+                    std::getline(std::cin, _newValue);  // This will read the entire line, including spaces  
+
+                    db.modifyPatientAddress(_index, _newValue);
+                break;
+
+                case 2:
+                    std::cin.ignore(); // Ignore the newline character left in the buffer  
+                    std::cout << "Enter new value: ";
+                    std::getline(std::cin, _newValue);  // This will read the entire line, including spaces  
+
+                    db.modifyPatientPhoneNumber(_index, _newValue);
+                break;
+            }
+        }
+        else {
+            std::cout << "wrong id\n";
+        }
+    }
+    else {
+        std::cout << "You need to log in to access this feature\n";
+    }
+}
+
+void Admin::manageDoctorAccount()
+{
+    if(getLoginState() == loginState::LOGIN_VERIFIED) {
+        db.viewDoctors();
+
+        int _id;
+        std::cout << "Enter Doctor ID of patient you want ti modify: ";
+        std::cin >> _id;
+        
+        int _index = db.findDoctor(_id);
+        if(_index != -1) {
+            int _choice;
+            std::string _newValue;
+
+            std::cout << "Press 0 for modify name\n";
+            std::cout << "      1 for modify address\n";
+            std::cout << "      2 for modify phone number\n";
+            std::cout << "      3 for ignore\n";
+
+            std::cin >> _choice;
+
+            switch(_choice) {
+                case 0:
+                    std::cin.ignore(); // Ignore the newline character left in the buffer  
+                    std::cout << "Enter new value: ";
+                    std::getline(std::cin, _newValue);  // This will read the entire line, including spaces  
+
+                    db.modifyDoctorName(_index, _newValue);
+                break;
+
+                case 1:
+                    std::cin.ignore(); // Ignore the newline character left in the buffer  
+                    std::cout << "Enter new value: ";
+                    std::getline(std::cin, _newValue);  // This will read the entire line, including spaces  
+
+                    db.modifyDoctorAddress(_index, _newValue);
+                break;
+
+                case 2:
+                    std::cin.ignore(); // Ignore the newline character left in the buffer  
+                    std::cout << "Enter new value: ";
+                    std::getline(std::cin, _newValue);  // This will read the entire line, including spaces  
+
+                    db.modifyDoctorPhoneNumber(_index, _newValue);
+                break;
+            }
+        }
+        else {
+            std::cout << "wrong id\n";
+        }
+    }
+    else {
+        std::cout << "You need to log in to access this feature\n";
+    }
+}

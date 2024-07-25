@@ -48,7 +48,6 @@ public:
     virtual bool login() = 0;
     void logout();
     void manageAccount();
-
     virtual void displayInfo() const;
 };
 

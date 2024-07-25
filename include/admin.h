@@ -36,6 +36,8 @@ public:
     bool login() override;
     void addPatient();
     void addDoctor();
+    void managePatientAccount();
+    void manageDoctorAccount();
 
     /********** helper functions *************/
     void displayInfo() const override;

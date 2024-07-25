@@ -245,7 +245,7 @@ void Database::viewAppointments()
     }
 }
 
-void Database::modifyName(int patientId, std::string newValue) {
+void Database::modifyPatientName(int patientId, std::string newValue) {
     for(auto & patient : patients) {
         if(patient.getId() == patientId) {
             patient.setName(newValue);
@@ -253,7 +253,7 @@ void Database::modifyName(int patientId, std::string newValue) {
     }
 }
 
-void Database::modifyAddress(int patientId, std::string newValue) {
+void Database::modifyPatientAddress(int patientId, std::string newValue) {
     for(auto & patient : patients) {
         if(patient.getId() == patientId) {
             patient.setAddress(newValue);
@@ -261,7 +261,7 @@ void Database::modifyAddress(int patientId, std::string newValue) {
     }
 }
 
-void Database::modifyPhoneNumber(int patientId, std::string  newValue) {
+void Database::modifyPatientPhoneNumber(int patientId, std::string  newValue) {
     for(auto & patient : patients) {
         if(patient.getId() == patientId) {
             patient.setPhoneNumber(newValue);
@@ -269,10 +269,34 @@ void Database::modifyPhoneNumber(int patientId, std::string  newValue) {
     }
 }
 
-void Database::modifyMedicalReport(int patientId, std::string newValue) {
+void Database::modifyPatientMedicalReport(int patientId, std::string newValue) {
     for(auto & patient : patients) {
         if(patient.getId() == patientId) {
             patient.setMedicalHistory(newValue);
+        }
+    }
+}
+
+void Database::modifyDoctorName(int doctorId, std::string newValue) {
+    for(auto & doctor : doctors) {
+        if(doctor.getId() == doctorId) {
+            doctor.setName(newValue);
+        }
+    }
+}
+
+void Database::modifyDoctorAddress(int doctorId, std::string newValue) {
+    for(auto & doctor : doctors) {
+        if(doctor.getId() == doctorId) {
+            doctor.setAddress(newValue);
+        }
+    }
+}
+
+void Database::modifyDoctorPhoneNumber(int doctorId, std::string  newValue) {
+    for(auto & doctor : doctors) {
+        if(doctor.getId() == doctorId) {
+            doctor.setPhoneNumber(newValue);
         }
     }
 }
@@ -282,6 +306,15 @@ void Database::viewPatients() {
     
     for(const auto& patient : patients) {
         patient.displayInfo();
+        std::cout << "--------------------------\n";
+    }
+}
+
+void Database::viewDoctors() {
+    std::cout << "--------------------------\n";
+    
+    for(const auto& doctor : doctors) {
+        doctor.displayInfo();
         std::cout << "--------------------------\n";
     }
 }
@@ -354,6 +387,32 @@ int Database::findAppointment(int id) {
     
     for(int i=0; i<noOfAppointments; i++) {
         if(id == appointments[i].getId()) {
+            _result = i;
+            break;
+        }
+    }
+
+    return _result;
+}
+
+int Database::findPatient(int id) {
+    int _result = -1;
+    
+    for(int i=0; i<noOfPatients; i++) {
+        if(id == patients[i].getId()) {
+            _result = i;
+            break;
+        }
+    }
+
+    return _result;
+}
+
+int Database::findDoctor(int id) {
+    int _result = -1;
+    
+    for(int i=0; i<noOfDoctors; i++) {
+        if(id == doctors[i].getId()) {
             _result = i;
             break;
         }

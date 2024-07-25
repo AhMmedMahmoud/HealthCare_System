@@ -113,7 +113,7 @@ void User::manageAccount()
                 std::cout << "Enter new value: ";
                 std::getline(std::cin, _newValue);  // This will read the entire line, including spaces  
 
-                db.modifyName(getId(), _newValue);
+                db.modifyPatientName(getId(), _newValue);
             break;
 
             case 1:
@@ -121,7 +121,7 @@ void User::manageAccount()
                 std::cout << "Enter new value: ";
                 std::getline(std::cin, _newValue);  // This will read the entire line, including spaces  
 
-                db.modifyAddress(getId(), _newValue);
+                db.modifyPatientAddress(getId(), _newValue);
             break;
 
             case 2:
@@ -129,7 +129,7 @@ void User::manageAccount()
                 std::cout << "Enter new value: ";
                 std::getline(std::cin, _newValue);  // This will read the entire line, including spaces  
 
-                db.modifyPhoneNumber(getId(), _newValue);
+                db.modifyPatientPhoneNumber(getId(), _newValue);
             break;
         }
     }

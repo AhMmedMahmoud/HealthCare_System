@@ -60,7 +60,6 @@ void Patient::displayInfo() const
     std::cout << "Medical History: " << medicalHistory << "\n";
 }
 
-
 void Patient::bookAppointment()
 {
     if(getLoginState() == loginState::LOGIN_VERIFIED) {
