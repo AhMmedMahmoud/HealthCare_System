@@ -9,7 +9,7 @@
 ![image](https://github.com/user-attachments/assets/343f5b8c-5044-40ab-bd6a-e1beb920c332)
 
 # Doctor Login Sequence Diagram
-![image](https://github.com/user-attachments/assets/4d76aeb2-fc08-4e69-8970-9480ee53a797)
+![image](https://github.com/user-attachments/assets/7be0decf-2939-4913-ac4c-2c6e7e3da5c1)
 
 # build instructions
 ```cmake
